@@ -87,7 +87,7 @@ public class QuanLyHocSinh {
         }
         HocSinh maxHS = danhSachHocSinh.get(0);
         for (HocSinh hs: danhSachHocSinh) {
-            if (hs.tinhDiemTrungBinh() > maxHS.tinhDiemTrungBinh()) {
+            if (hs.getDiemTrungBinh() > maxHS.getDiemTrungBinh()) {
                 maxHS = hs;
             }
         }
@@ -102,7 +102,7 @@ public class QuanLyHocSinh {
         }
         HocSinh minHS = danhSachHocSinh.get(0);
         for (HocSinh hs: danhSachHocSinh) {
-            if (hs.tinhDiemTrungBinh() < minHS.tinhDiemTrungBinh()) {
+            if (hs.getDiemTrungBinh() < minHS.getDiemTrungBinh()) {
                 minHS = hs;
             }
         }
@@ -152,5 +152,65 @@ public class QuanLyHocSinh {
             }
         }
         System.out.println("Cập nhật thông tin thành công");
+    }
+
+    public void hienThiHocSinhCoTongDiemTren24() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        ArrayList<HocSinh> hocSinhCoTongDiemTren24 = new ArrayList<>();
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getTongDiem() > 24) {
+                hocSinhCoTongDiemTren24.add(hs);
+            }
+        }
+        if (hocSinhCoTongDiemTren24.isEmpty()) {
+            System.out.println("KHông có một học sinh nào");
+        } else {
+            for (HocSinh hs: hocSinhCoTongDiemTren24) {
+                hs.hienThiThongTinHocSinh();
+            }
+        }
+    }
+
+    public void hienThiHocSinhCoTongDiemDuo18() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        ArrayList<HocSinh> hocSinhCoTongDiemDuo18 = new ArrayList<>();
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getTongDiem() < 18) {
+                hocSinhCoTongDiemDuo18.add(hs);
+            }
+        }
+        if (hocSinhCoTongDiemDuo18.isEmpty()) {
+            System.out.println("KHông có một học sinh nào");
+        } else {
+            for (HocSinh hs: hocSinhCoTongDiemDuo18) {
+                hs.hienThiThongTinHocSinh();
+            }
+        }
+    }
+
+    public void hienThiHocSinhGioi() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        ArrayList<HocSinh> hocSinhGioi = new ArrayList<>();
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getDiemTrungBinh() > 8) {
+                hocSinhGioi.add(hs);
+            }
+        }
+        if (hocSinhGioi.isEmpty()) {
+            System.out.println("KHông có một học sinh nào");
+        } else {
+            for (HocSinh hs: hocSinhGioi) {
+                hs.hienThiThongTinHocSinh();
+            }
+        }
     }
 }

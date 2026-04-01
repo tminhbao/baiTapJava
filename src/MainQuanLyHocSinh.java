@@ -47,10 +47,13 @@ public class MainQuanLyHocSinh {
                     qlhs.capNhatThongTinHocSinh(sc);
                     break;
                 case 9:
+                    qlhs.hienThiHocSinhCoTongDiemTren24();
                     break;
                 case 10:
+                    qlhs.hienThiHocSinhCoTongDiemDuo18();
                     break;
                 case 11:
+                    qlhs.hienThiHocSinhGioi();
                     break;
                 case 12:
                     System.out.println("Thoát khỏi chương trình. Hẹn gặp lại!!!");

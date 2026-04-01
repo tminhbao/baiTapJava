@@ -31,7 +31,10 @@ public class HocSinh {
     public String getHoTen() {
         return hoTen;
     }
-    public double tinhDiemTrungBinh() {
+    public double getDiemTrungBinh() {
         return (double)((toan + ly + hoa)/3);
+    }
+    public double getTongDiem() {
+        return (double)(toan + ly + hoa);
     }
 }
