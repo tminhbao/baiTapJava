@@ -41,6 +41,7 @@ public class MainQuanLyHocSinh {
                     qlhs.timKiemHocSinhCoDTBThapNhat();
                     break;
                 case 7:
+                    qlhs.sapXepHocSinhTheoTen();
                     break;
                 case 8:
                     break;

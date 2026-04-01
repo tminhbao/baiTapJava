@@ -109,4 +109,15 @@ public class QuanLyHocSinh {
         System.out.println("Học sinh có điểm trung bình thấp nhất là: ");
         minHS.hienThiThongTinHocSinh();
     }
+
+    public void sapXepHocSinhTheoTen() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        danhSachHocSinh.sort((hs1, hs2) -> hs1.getHoTen().compareTo(hs2.getHoTen()));
+        System.out.println("Danh sách học sinh sau khi sắp xếp");
+        hienThiDanhSachHocSinh();
+    }
+
 }
