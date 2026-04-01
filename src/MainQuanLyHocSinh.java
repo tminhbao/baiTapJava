@@ -57,6 +57,7 @@ public class MainQuanLyHocSinh {
                     break;
                 case 12:
                     System.out.println("Thoát khỏi chương trình. Hẹn gặp lại!!!");
+                    break;
                 default:
                     System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại");
             }
