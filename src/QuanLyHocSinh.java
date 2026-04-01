@@ -36,4 +36,21 @@ public class QuanLyHocSinh {
             hs.hienThiThongTinHocSinh();
         }
     }
+
+    public void xoaHocSinhTheoId(Scanner sc) {
+        System.out.println("Nhập ID học sinh cần xóa");
+        String id = sc.nextLine();
+        boolean found = false;
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getId().equals((id))) {
+                danhSachHocSinh.remove(hs);
+                System.out.println("Xóa học sinh thành công");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Không tìm thấy học sinh với ID: " + id);
+        }
+    }
 }

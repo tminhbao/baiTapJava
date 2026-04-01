@@ -29,25 +29,19 @@ public class MainQuanLyHocSinh {
                     qlhs.hienThiDanhSachHocSinh();
                     break;
                 case 3:
-                    qlhs.xoaNhanVienTheoId(sc);
+                    qlhs.xoaHocSinhTheoId(sc);
                     break;
                 case 4:
-                    qlhs.timKiemNhanVienTheoId(sc);
                     break;
                 case 5:
-                    qlhs.timKiemNhanVienCoLuongCaoNhat();
                     break;
                 case 6:
-                    qlhs.timKiemNhanVienCoSoGioLamThapNhat();
                     break;
                 case 7:
-                    qlhs.sapXepNhanVienTheoTen();
                     break;
                 case 8:
-                    qlhs.sapXepNhanVienTheoSoGioLam();
                     break;
                 case 9:
-                    qlhs.capNhatThongTinNhanVien(sc);
                     break;
                 case 10:
                     break;
