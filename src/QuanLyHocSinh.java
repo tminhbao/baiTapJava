@@ -120,4 +120,37 @@ public class QuanLyHocSinh {
         hienThiDanhSachHocSinh();
     }
 
+    public void capNhatThongTinHocSinh(Scanner sc){
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        System.out.println("Nhập ID học sinh cần cập nhật: ");
+        String id = sc.nextLine();
+        HocSinh hs = timHocSinhTheoId(id);
+        if (hs == null) {
+            System.out.println("Không tìm thấy học sinh với ID "+ id);
+            return;
+        }
+        System.out.println("Nhập tên mới: ");
+        String hoTen = sc.nextLine();
+        System.out.println("Nhập lớp mới: ");
+        String lop = sc.nextLine();
+        System.out.println("Nhập địa chỉ mới: ");
+        String diaChi = sc.nextLine();
+        System.out.println("Nhập điểm Toán mới: ");
+        double toan = Double.parseDouble(sc.nextLine());
+        System.out.println("Nhập điểm Lý mới: ");
+        double ly = Double.parseDouble(sc.nextLine());
+        System.out.println("Nhập điểm Hóa mới: ");
+        double hoa = Double.parseDouble(sc.nextLine());
+        hs = new HocSinh(id, hoTen, lop, diaChi, toan, ly, hoa);
+        for (int i = 0; i < danhSachHocSinh.size(); i++) {
+            if (danhSachHocSinh.get(i).getId().equals(id)) {
+                danhSachHocSinh.set(i, hs);
+                break;
+            }
+        }
+        System.out.println("Cập nhật thông tin thành công");
+    }
 }

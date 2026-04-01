@@ -44,6 +44,7 @@ public class MainQuanLyHocSinh {
                     qlhs.sapXepHocSinhTheoTen();
                     break;
                 case 8:
+                    qlhs.capNhatThongTinHocSinh(sc);
                     break;
                 case 9:
                     break;
