@@ -80,4 +80,33 @@ public class QuanLyHocSinh {
             System.out.println("Không tìm thấy học sinh với ID: " + id);
         }
     }
+    public void timKiemHocSinhCoDTBCaoNhat() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        HocSinh maxHS = danhSachHocSinh.get(0);
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.tinhDiemTrungBinh() > maxHS.tinhDiemTrungBinh()) {
+                maxHS = hs;
+            }
+        }
+        System.out.println("Học sinh có điểm trung bình cao nhất là: ");
+        maxHS.hienThiThongTinHocSinh();
+    }
+
+    public void timKiemHocSinhCoDTBThapNhat() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        HocSinh minHS = danhSachHocSinh.get(0);
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.tinhDiemTrungBinh() < minHS.tinhDiemTrungBinh()) {
+                minHS = hs;
+            }
+        }
+        System.out.println("Học sinh có điểm trung bình thấp nhất là: ");
+        minHS.hienThiThongTinHocSinh();
+    }
 }

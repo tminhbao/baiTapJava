@@ -35,8 +35,10 @@ public class MainQuanLyHocSinh {
                     qlhs.timKiemHocSinhTheoId(sc);
                     break;
                 case 5:
+                    qlhs.timKiemHocSinhCoDTBCaoNhat();
                     break;
                 case 6:
+                    qlhs.timKiemHocSinhCoDTBThapNhat();
                     break;
                 case 7:
                     break;
