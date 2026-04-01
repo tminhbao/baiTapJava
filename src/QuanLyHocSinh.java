@@ -4,12 +4,23 @@ import java.util.Scanner;
 public class QuanLyHocSinh {
     private ArrayList<HocSinh> danhSachHocSinh = new ArrayList<>();
 
+    public HocSinh timHocSinhTheoId(String id) {
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getId().equals(id)) {
+                return hs;
+            }
+        }
+        return null;
+    }
+
     public void themHocSinh(Scanner sc) {
         System.out.println("Thêm học sinh");
         System.out.println("Nhập id: ");
         String id = sc.nextLine();
-        // Check id duplicated
-
+        if (timHocSinhTheoId(id) != null) {
+            System.out.println("ID đã tồn tại. Vui lòng nhập ID khác");
+            return;
+        }
         System.out.println("Nhập họ tên: ");
         String hoTen = sc.nextLine();
         System.out.println("Nhập lớp: ");
@@ -45,6 +56,22 @@ public class QuanLyHocSinh {
             if (hs.getId().equals((id))) {
                 danhSachHocSinh.remove(hs);
                 System.out.println("Xóa học sinh thành công");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Không tìm thấy học sinh với ID: " + id);
+        }
+    }
+
+    public void timKiemHocSinhTheoId(Scanner sc) {
+        System.out.println("Nhập ID học sinh cần tìm kiếm: ");
+        String id = sc.nextLine();
+        boolean found = false;
+        for (HocSinh hs: danhSachHocSinh) {
+            if (hs.getId().equals(id)) {
+                hs.hienThiThongTinHocSinh();
                 found = true;
                 break;
             }

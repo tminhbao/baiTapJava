@@ -32,6 +32,7 @@ public class MainQuanLyHocSinh {
                     qlhs.xoaHocSinhTheoId(sc);
                     break;
                 case 4:
+                    qlhs.timKiemHocSinhTheoId(sc);
                     break;
                 case 5:
                     break;
