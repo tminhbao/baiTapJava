@@ -23,10 +23,10 @@ public class MainQuanLyHocSinh {
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    qlhs.themNhanVien(sc);
+                    qlhs.themHocSinh(sc);
                     break;
                 case 2:
-                    qlhs.hienThiDanhSachNhanVien();
+                    qlhs.hienThiDanhSachHocSinh();
                     break;
                 case 3:
                     qlhs.xoaNhanVienTheoId(sc);

@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class QuanLyHocSinh {
     private ArrayList<HocSinh> danhSachHocSinh = new ArrayList<>();
+
     public void themHocSinh(Scanner sc) {
         System.out.println("Thêm học sinh");
         System.out.println("Nhập id: ");
@@ -21,8 +22,18 @@ public class QuanLyHocSinh {
         double ly = Double.parseDouble(sc.nextLine());
         System.out.println("Nhập điểm Hóa: ");
         double hoa = Double.parseDouble(sc.nextLine());
-        HocSinh hs = new HocSinh(id, hoTen, lop, diaChi, toan, ly. hoa);
+        HocSinh hs = new HocSinh(id, hoTen, lop, diaChi, toan, ly, hoa);
         danhSachHocSinh.add(hs);
         System.out.println("Thêm học sinh thành công");
+    }
+
+    public void hienThiDanhSachHocSinh() {
+        if (danhSachHocSinh.isEmpty()) {
+            System.out.println("Danh sách học sinh trống");
+            return;
+        }
+        for (HocSinh hs: danhSachHocSinh) {
+            hs.hienThiThongTinHocSinh();
+        }
     }
 }
